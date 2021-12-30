@@ -1,0 +1,19 @@
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label class="inline-block mb-2">Name</label>
+    <input type="text" class="form-control w-50" formControlName="name">
+    <p class="text-danger" *ngIf="user.touched && user.dirty && user.invalid">
+      Name is required
+    </p>
+  </div>
+  <div class="form-group">
+    <label class="inline-block mb-2">Content</label>
+    <textarea class="form-control w-100" formControlName="content" rows="3"></textarea>
+    <p class="text-danger" *ngIf="content.touched && content.dirty && content.invalid">
+      Comment is required
+    </p>
+  </div>
+  <button type="submit" class="btn btn-primary mt-3" [class.disabled]="formGroup.invalid"
+    [disabled]="formGroup.invalid"
+  >Send</button>
+</form>

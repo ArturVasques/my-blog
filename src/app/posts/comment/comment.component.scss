@@ -1,0 +1,25 @@
+@import "variables";
+
+.comment {
+  margin-bottom: 2rem;
+
+  &__user {
+    font-size: 14px;
+    margin-bottom:5px;
+  }
+
+  &__content {
+    font-size: 18px;
+  }
+
+  &__edit {
+    font-size: 16px;
+    float: right;
+
+    &:hover {
+      cursor: pointer;
+      color: $main-blue;
+      user-select: none;
+    }
+  }
+}

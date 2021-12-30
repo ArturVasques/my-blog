@@ -1,0 +1,17 @@
+<section class="comments">
+  <div class="container p-0">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="comments__title text-center">Comments</h1>
+
+        <app-comment-form [postId]="postId" [comment]="comment" (updateComments)="updateComments($event)">
+        </app-comment-form>
+
+        <div class="mt-5">
+          <app-comment (editComment)="editComment($event)" [comment]="comment"
+            *ngFor="let comment of comments; let i = index" [attr.data-index]="i"></app-comment>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

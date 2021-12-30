@@ -1,0 +1,25 @@
+<section>
+  <div class="container-fluid p-4" *ngIf="post$ | async as post">
+    <div class="row">
+      <div class="col-12 text-center">
+        <img class="img-fluid rounded" [src]="'https://picsum.photos/id/' + post.id + 9 + '/2000/300'">
+      </div>
+    </div>
+    <div class="row mt-5 text-light">
+      <div class="col-8 offset-2">
+        <h1 class="text-center">{{ post.title }}</h1>
+        <div class="tag__item mb-3">
+          {{post.author}}
+        </div>
+        <div>
+          {{ post.publish_date | formatDate }}
+        </div>
+
+        <article class="post__description my-5" [innerHtml]="post.content">
+        </article>
+
+        <app-comments [postId]="post.id"></app-comments>
+      </div>
+    </div>
+  </div>
+</section>

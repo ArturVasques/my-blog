@@ -1,0 +1,12 @@
+@import "variables";
+
+.comments {
+  background:rgb(83, 83, 83);
+  border-radius: 10px;
+  padding: 25px;
+
+  &__title {
+    color: $main-white;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="comment">
+  <div class="comment__edit" (click)="editComment.emit(comment)">Edit</div>
+  <div class="comment__user">
+    <span class="fw-bold">{{ comment.user }}</span> {{ comment.date | formatDate}}
+  </div>
+  <div class="comment__content">
+    {{ comment.content }}
+  </div>
+</div>
